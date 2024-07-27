@@ -3,7 +3,7 @@ package com.sparta.springprepare.controller;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/test")
 public class RestfulApiController {
 
     @GetMapping()
