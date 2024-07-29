@@ -4,7 +4,6 @@ import com.sparta.springprepare.dto.MemoRequestDto;
 import com.sparta.springprepare.dto.MemoResponseDto;
 import com.sparta.springprepare.entity.Memo;
 import com.sparta.springprepare.repository.MemoRepository;
-import org.springframework.jdbc.core.JdbcTemplate;
 
 import java.util.List;
 
@@ -12,8 +11,8 @@ public class MemoService {
 
     private final MemoRepository memoRepository;
 
-    public MemoService(JdbcTemplate jdbcTemplate) {
-        this.memoRepository = new MemoRepository(jdbcTemplate);
+    public MemoService(MemoRepository memoRepository) {
+        this.memoRepository = memoRepository;
     }
 
     public MemoResponseDto createMemo(MemoRequestDto requestDto) {
