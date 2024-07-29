@@ -4,9 +4,11 @@ import com.sparta.springprepare.dto.MemoRequestDto;
 import com.sparta.springprepare.dto.MemoResponseDto;
 import com.sparta.springprepare.entity.Memo;
 import com.sparta.springprepare.repository.MemoRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class MemoService {
 
     private final MemoRepository memoRepository;
